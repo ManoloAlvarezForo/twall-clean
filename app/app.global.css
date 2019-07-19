@@ -1,47 +1,280 @@
-/*
- * @NOTE: Prepend a `~` to css file paths that are in your node_modules
- *        See https://github.com/webpack-contrib/sass-loader#imports
- */
-@import '~@fortawesome/fontawesome-free/css/all.css';
-
-body {
-  position: relative;
-  color: white;
-  height: 100vh;
-  background-color: #232c39;
-  background-image: linear-gradient(
-    45deg,
-    rgba(0, 216, 255, 0.5) 10%,
-    rgba(0, 1, 127, 0.7)
-  );
-  font-family: Arial, Helvetica, Helvetica Neue, serif;
-  overflow-y: hidden;
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../resources/fonts/Pacifico-Regular.ttf') format('truetype');
 }
 
-h2 {
+@font-face {
+  font-family: 'Nunito Black';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../resources/fonts/Nunito-Black.ttf') format('truetype'),
+    url('../resources/fonts/Nunito-BlackItalic.ttf') format('truetype'),
+    url('../resources/fonts/Nunito-Bold.ttf') format('truetype'),
+    url('../resources/fonts/Nunito-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nunito ExtraLight';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../resources/fonts/Nunito-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nunito ExtraBold';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../resources/fonts/Nunito-ExtraBold.ttf') format('truetype');
+}
+
+.height-full {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
   margin: 0;
-  font-size: 2.25rem;
-  font-weight: bold;
-  letter-spacing: -0.025em;
+
+  /* overflow: hidden; */
+}
+
+body {
+  /* font-family: 'Nunito ExtraLight'; */
+
+  /* height: 100vh; */
+  margin: unset;
+}
+
+/* Css copy from Web Whatsapp app */
+._3dqpi {
+  position: relative;
+}
+
+@media screen and (min-width: 1441px) {
+  .app-wrapper-web ._3dqpi {
+    height: calc(100% - 32px);
+    top: 19px;
+    width: 1396px;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+  }
+  html[dir] .app-wrapper-web.safari-fix ._3dqpi {
+    border-radius: 4px;
+  }
+}
+
+/* END Css copy from Web Whatsapp app */
+
+.custom-input > input {
+  margin: 5px 0;
+  border-radius: 5px;
+  border-style: none;
+  padding: 15px 7px;
+  background-color: #dec2cc;
+
+  /* color: #ffffff; */
+}
+
+.custom-button {
+  border-style: none;
+  background-color: rgb(74, 67, 71);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  height: 50px;
+  font-size: 18px;
+  width: 100%;
+}
+
+/* .auth-container {
+  min-width: 400px;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 50px;
+}
+
+.form-container {
+  border: 1px dashed #616161;
+  width: 500px;
+  padding: 50px 50px 35px 50px;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  background: none;
+} */
+
+.gradient-bc {
+  background: #bc4e9c; /* fallback for old browsers */
+  background: linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.inputSeparation > input {
+  margin: 5px 0;
+  border-radius: 5px;
+  border-style: none;
+  padding: 15px 7px;
+  background-color: #dec2cc;
   color: #fff;
 }
 
-p {
-  font-size: 24px;
+/* Drawer */
+@media (min-width: 600px) {
+  .MiniDrawer-drawerClose-8 {
+    width: 57px !important;
+  }
 }
 
-li {
-  list-style: none;
-}
-
-a {
-  color: white;
-  opacity: 0.75;
-  text-decoration: none;
-}
-
-a:hover {
-  opacity: 1;
-  text-decoration: none;
+.detail-button {
   cursor: pointer;
+  border-radius: 50%;
+}
+
+.detail-button:hover {
+  color: #272727 !important;
+  background-color: #8c8c8c !important;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+
+  /* -webkit-border-radius: 10px;
+  border-radius: 10px; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* -webkit-border-radius: 10px;
+  border-radius: 10px; */
+  background: #9e9e9e;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #9e9e9e;
+}
+
+.box-shadow-default {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  z-index: 1100;
+}
+
+.gradient-background {
+  background-image: var(--main-gradient-background);
+}
+
+.tile-calendar {
+  cursor: pointer;
+}
+
+.tile-calendar:hover {
+  background-color: rgba(106, 115, 138, 0.13);
+}
+
+.event-calendar {
+  cursor: pointer;
+  background-color: rgb(15, 168, 187);
+  border-left: 7px solid rgb(106, 115, 138);
+}
+
+.event-calendar:hover {
+  background-color: #13b9cc;
+  border-radius: 3px;
+}
+
+.dialog-height {
+  height: 650px;
+}
+
+/* Custom table */
+.custom-table {
+  display: flex;
+  flex-direction: row;
+  margin: 1.5px 0;
+  padding: 5px 0;
+  border: 0.5px solid gray;
+  border-radius: 5px;
+}
+
+.row-table {
+  cursor: pointer;
+}
+
+.row-table:hover {
+  background-color: #676c77;
+}
+
+.close-row {
+  position: absolute;
+  float: right;
+  color: #ff5722;
+  right: -1px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  top: 2px;
+  border: 1px solid #ff5722;
+  border-radius: 5px;
+  background-color: #555d6f;
+  cursor: pointer;
+}
+
+.close-row:hover {
+  background-color: #d33303;
+  color: white;
+}
+
+/* authentication */
+.title-logo {
+  width: 50%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.mini-logo {
+  font-size: 1.8rem;
+  text-align: center;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: flex-start;
+  background: none;
+  height: 100%;
+  width: 50%;
+}
+
+.auth-form-container {
+  /* background-color: #414755; */
+  background-color: none;
+  border: 2px dashed #616161;
+  border-radius: 0 30px 0 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  min-width: 350px;
+  margin: 10px 10px 10px 50px;
+  padding: 50px 40px 50px 20px;
 }
